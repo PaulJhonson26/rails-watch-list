@@ -1,0 +1,21 @@
+<nav class = "navbar-lewagon">
+  <i class="fa-solid fa-film"></i>
+  <div class = "navbar-options">
+    <h4>my lists</h4>
+    <h4><%= link_to "Add A list", new_list_path%></h4>
+  </div>
+</nav>
+<div class = "banner">
+  <h1>Save any kind of movies</h1>
+</div>
+<div class = "container">
+  <h1>list of your lists</h1>
+  <% @lists.each do |list| %>
+    <div class = "card">
+      <%= link_to list_path(list) do %>
+        <h3><%=list.name  %></h3>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>
