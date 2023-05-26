@@ -11,9 +11,10 @@
 <div class = "container">
   <h1>list of your lists</h1>
   <% @lists.each do |list| %>
-    <div class = "card">
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%=cl_image_path list.photo.key, height: 300, width: 400, crop: :crop %>')">
       <%= link_to list_path(list) do %>
-        <h3><%=list.name  %></h3>
+        <h3><%=list.name%></h3>
       <% end %>
     </div>
   <% end %>
